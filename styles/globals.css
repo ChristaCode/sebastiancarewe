@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cursor-wand {
+    cursor: url('/cursor-wand.png'), pointer; /* Adjust the path */
+    box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.8);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .cursor-wand:hover {
+    box-shadow: 0 0 25px 8px rgba(255, 215, 0, 1);
+  }
+  
+  .glowing-button {
+    box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.8);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .glowing-button:hover .code-overlay {
+    display: block;
+  }
+  
+  .code-overlay {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+  }
+
+  /* Set up the wallpaper background */
+.wallpaper-background {
+    background-image: url('/path/to/your/wallpaper-image.jpg'); /* Replace with your wallpaper image */
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh; /* Ensure it takes the full viewport height */
+    position: relative;
+  }
+  
+  /* Cursor for the wallpaper */
+  .wallpaper-background:hover {
+    cursor: url('/path/to/your/fist-cursor.png'), pointer; /* Replace with your fist cursor image */
+  }
+  
+  /* Styles for the code reveal effect */
+  .code-reveal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Background behind the code */
+    padding: 20px;
+    border-radius: 8px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease;
+  }
+  
+  .show-code {
+    opacity: 1; /* Show the code */
+  }
+  

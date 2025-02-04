@@ -1,0 +1,19 @@
+{
+    "extends": "next/core-web-vitals",
+    "rules": {},
+    "overrides": [
+      {
+        "files": ["next.config.js"],  // or "next.config.ts" if you switched to TypeScript
+        "env": {
+          "node": true                // Sets Node environment
+        },
+        "parserOptions": {
+          "sourceType": "script"      // Use 'script' mode for CommonJS support
+        },
+        "rules": {
+          "no-undef": "off"           // Ignore undefined errors for module, exports
+        }
+      }
+    ]
+  }
+  
